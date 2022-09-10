@@ -1,0 +1,3 @@
+echo "${HOST}:${PORT}:${DATABASE_NAME}:${DATABASE_USERNAME}:${DATABASE_PASSWORD}" > ${HOME}/.pgpass
+chmod 0600 ${HOME}/.pgpass
+pg_dump -h ${HOST} -U ${DATABASE_USERNAME} ${DATABASE_NAME} -f ${DB_BACKUP_FILE}
