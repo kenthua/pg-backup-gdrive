@@ -1,4 +1,4 @@
-FROM alpine:3.18.4
+FROM alpine:3.20.1
 
 RUN apk update && apk add postgresql-client curl file && rm -rf /var/cache/apk/*
 RUN curl --compressed -Ls https://github.com/labbots/google-drive-upload/raw/master/install.sh | sh -s
